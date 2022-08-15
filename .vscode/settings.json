@@ -3,5 +3,11 @@
         "activityBar.background": "#173134",
         "titleBar.activeBackground": "#204549",
         "titleBar.activeForeground": "#F6FAFB"
-    }
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+      // Add those two lines:
+      "editor.formatOnSave": true, // Tell VSCode to format files on save
+      "editor.defaultFormatter": "esbenp.prettier-vscode" // Tell VSCode to use Prettier as default file formatter
 }
