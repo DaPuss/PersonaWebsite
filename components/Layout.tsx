@@ -6,11 +6,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
-        <Header />
+      <Header />
+      <div className="bg-primaryBackground min-w-full min-h-screen">
         <main>{children}</main>
+        {/* <Footer /> */}
       </div>
-      <Footer />
     </>
   )
 }

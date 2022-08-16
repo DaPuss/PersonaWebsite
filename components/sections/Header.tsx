@@ -1,33 +1,55 @@
 import Link from 'next/link'
-
-const HeaderLink = ({index, sectionName, href}: {index: number, sectionName: string, href: string}) => {
+import Button from '../Button'
+import NavDrawer from '../NavDrawer'
+const HeaderLink = ({
+  index,
+  sectionName,
+  href,
+}: {
+  index: string
+  sectionName: string
+  href: string
+}) => {
   return (
     <Link href={`#${href}`}>
-      <div className="cursor-pointer text-red-800">
-        {index}. <a className="Vwhite-text text-xl myfont mx-5 text-slate-400 hover:text-red-800">{sectionName}</a>
+      <div className="cursor-pointer text-primaryHighlight font-bold mx-2">
+        {index}.{' '}
+        <a className="Vwhite-text text-xl font-bold myfont mx-5 text-primaryText hover:text-primaryHighlight">
+          {sectionName}
+        </a>
       </div>
     </Link>
   )
 }
 
 const Header = () => {
+  const navItems: React.ReactNode[] = [
+    <HeaderLink index={'01'} sectionName="About" href="about-section" />,
+    <HeaderLink
+      index={'02'}
+      sectionName="Experience"
+      href="experience-section"
+    />,
+    <HeaderLink index={'03'} sectionName="Work" href="work-section" />,
+    <HeaderLink index={'04'} sectionName="Contact" href="contact-section" />,
+    <Button onClick={() => {}}>Resume</Button>,
+  ]
   return (
-    <nav className="Vdark-2 shadow-xl">
-      <div className="container min-w-full">
-        <div className="relative flex items-center h-16 justify-between">
-          <div className="Vwhite-text text-4xl ml-5 myfont text-left">DF</div>
-          <div className="flex text-right">
-            <HeaderLink index={1} sectionName="About" href="about-section"/>
-            <HeaderLink index={2} sectionName="Experience" href="experience-section"/>
-            <HeaderLink index={3} sectionName="Work" href="work-section"/>
-            <HeaderLink index={4} sectionName="Contact" href="contact-section"/>
-            <button className="mx-5 p-1  border-solid border-2 border-slate-500 rounded-md" >Resume</button>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <NavDrawer navItems={navItems} />
+    // <nav className=" bg-primaryBackground  py-5 shadow-xl">
+    //   <div className="container min-w-full">
+    //     <div className="relative flex items-center h-16 justify-between px-10 pt-10">
+    //       <div className="text-primaryHighlight text-4xl ml-5 myfont text-left">
+    //         DF
+    //       </div>
+    //       <div className="flex items-center text-right">
+
+    //
+    //       </div>
+    //     </div>
+    //   </div>
+    // </nav>
   )
 }
 
-
-export default Header;
+export default Header

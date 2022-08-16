@@ -8,9 +8,9 @@ export default function Index({ preview, workExperience, personalProjects }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Dylan Frewen personal website</title>
+          <title>DF Portfolio</title>
         </Head>
-        <div className="px-5 md:px-40 py-40">
+        <div className="bg-primaryBackground px-5 md:px-40 py-40">
           <Intro />
         </div>
       </Layout>
