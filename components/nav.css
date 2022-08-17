@@ -1,0 +1,10 @@
+.navbar {
+  transition: all 330ms ease-out;
+}
+
+.navbar-open {
+  transform: translateX(0%);
+}
+.navbar-close {
+  transform: translateX(-100%);
+}
