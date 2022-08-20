@@ -1,18 +1,17 @@
 import Footer from './sections/Footer'
 import Meta from './Meta'
-import Header from './sections/Header'
+import Nav from './Nav/Nav'
 import React from 'react'
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <>
-      <Meta />
-      <Header />
-      <div className="bg-primaryBackground min-w-full min-h-screen">
-        <main>{children}</main>
-        {/* <Footer /> */}
-      </div>
-    </>
-  )
+    return (
+        <div className="bg-primaryBackground">
+            <Meta />
+            <Nav />
+            <main className="max-w-screen-2xl min-h-screen mx-auto px-40">
+                {children}
+            </main>
+        </div>
+    )
 }
 
 export default Layout

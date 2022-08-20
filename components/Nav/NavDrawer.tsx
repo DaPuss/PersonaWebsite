@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './NavDrawer.module.css'
 
 const NavItem = ({ children }: { children: React.ReactNode }) => {
-    return <div>{children}</div>
+    return <div className="text-4xl my-2 py-2">{children}</div>
 }
 
 interface props {
@@ -10,7 +10,7 @@ interface props {
 }
 
 const NavDrawer = ({ navItems }: props) => {
-    const [open, setOpen] = React.useState(true)
+    const [open, setOpen] = React.useState(false)
 
     const toggle = () => {
         console.log(!open)
@@ -22,17 +22,13 @@ const NavDrawer = ({ navItems }: props) => {
                 className={`${
                     open ? 'bg-primaryBackground opacity-5' : 'opacity-100'
                 } absolute top-0 right-0 h-screen w-screen`}
+            ></div>
+            <button
+                onClick={() => toggle()}
+                className="text-primaryHighlight text-4xl ml-5 myfont z-0"
             >
-                <div className="flex pr-2 justify-end">
-                    <button
-                        onClick={() => toggle()}
-                        className="text-black text-2xl p-2 font-bold"
-                    >
-                        &#9776;
-                    </button>
-                </div>
-            </div>
-
+                &#9776;
+            </button>
             <nav
                 className={`${open ? styles.navbarOpen : styles.navbarClose} ${
                     styles.navbar
@@ -44,7 +40,7 @@ const NavDrawer = ({ navItems }: props) => {
                 >
                     &#9747;
                 </button>
-                <div>
+                <div className="flex flex-col items-left">
                     {navItems.map((item, index) => (
                         <NavItem key={index}>{item}</NavItem>
                     ))}
