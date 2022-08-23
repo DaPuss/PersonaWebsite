@@ -1,0 +1,28 @@
+import Typography from './Typography'
+export default function SectionHeader({
+    count,
+    title,
+}: {
+    count: number
+    title: string
+}) {
+    return (
+        <div className="flex gap-6 py-10 items-center">
+            <Typography
+                variant="heading2"
+                as={'h2'}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+            >
+                {count}.
+            </Typography>
+            <Typography
+                variant="heading"
+                as={'h2'}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap font-bold"
+            >
+                {title}
+            </Typography>
+            <div className="bg-primaryGreen3 h-[2px] w-[100%] "></div>
+        </div>
+    )
+}

@@ -20,7 +20,9 @@ const NavDrawer = ({ navItems }: props) => {
         <>
             <div
                 className={`${
-                    open ? 'bg-primaryBackground opacity-5' : 'opacity-100'
+                    open
+                        ? 'bg-primaryBackground opacity-5'
+                        : 'opacity-100 -z-10'
                 } absolute top-0 right-0 h-screen w-screen`}
             ></div>
             <button

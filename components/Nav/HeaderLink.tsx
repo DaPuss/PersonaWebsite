@@ -13,15 +13,14 @@ const HeaderLink = ({
         <Link href={`#${href}`}>
             <div className="cursor-pointer flex ">
                 <Typography
-                    variant="heading"
-                    className="text-primaryHighlight text-2xl font-bold mx-2"
+                    variant="heading2"
+                    className="text-2xl font-bold mx-2"
                 >
                     {index}.{' '}
                 </Typography>
                 <Typography
-                    variant="link"
-                    className="Vwhite-text text-2xl font-bold myfont mx-5"
-                    href={href}
+                    variant="heading"
+                    className="text-2xl font-bold myfont mx-5 hover:text-primaryHighlight"
                 >
                     {sectionName}
                 </Typography>

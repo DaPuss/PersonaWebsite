@@ -7,9 +7,14 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primaryBackground: '#191528',
-                primaryText: '#adb5bd',
-                primaryHighlight: '#005066',
+                primaryBackground: '#5cdb95',
+                primaryText: '#333333',
+                primaryHighlight: '#05386b',
+                primaryGreen1: '#8ee4af',
+                primaryGreen2: '#5cdb95',
+                primaryGreen3: '#379683',
+                primaryCream: '#e0d5b7',
+                primaryBlue: '#05386b',
             },
             spacing: {
                 28: '7rem',

@@ -1,10 +1,17 @@
-const Section = ({ children }: { children: React.ReactNode }) => {
+const Section = ({
+    id,
+    children,
+}: {
+    id: string
+    children: React.ReactNode
+}) => {
     return (
-        <>
-            <section className="flex-col flex my-16 mx-auto">
-                {children}
-            </section>
-        </>
+        <section
+            id={id}
+            className="flex-col flex pb-40 my-40 mx-auto md:mx-10 lg:mx-20"
+        >
+            {children}
+        </section>
     )
 }
 
