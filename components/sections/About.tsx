@@ -4,7 +4,7 @@ import Section from '../Section'
 import SectionHeader from '../SectionHeader'
 import Typography from '../Typography'
 const About = () => {
-    const mobileBreakpoint = useMediaQuery('md')
+    const mobileBreakpoint = useMediaQuery('lg')
     return (
         <Section id="about">
             <SectionHeader count={1} title={'About Me'} />
@@ -14,16 +14,16 @@ const About = () => {
                 } gap-6`}
             >
                 <div className="flex flex-col gap-6">
-                    <Typography>
+                    <Typography className="text-xl">
                         Kia Ora! My name is Dylan and I love to solve problems
-                        involving tech. My interest in tech started back when I
-                        was a child, I spent countless hours learning how to
-                        configure the home network all so I could have a better
-                        connection on Call of Duty. My parents were never fans
-                        of my gaming, but ultimately it's how I fell in love
-                        with tech and got to where I am today.
+                        involving technology. My interest in tech started as a
+                        kid, I'd spend countless hours configuring the home
+                        network all for a better Call of Duty connection. My
+                        parents were never fans of my gaming, but ultimately
+                        it's how I fell in love with tech and got to where I am
+                        today.
                     </Typography>
-                    <Typography>
+                    <Typography className="text-xl">
                         Fast-forward to today, and I've worked with many amazing
                         people, through many different roles. I started my
                         career as a Data Entry Assistant at a
@@ -55,13 +55,13 @@ const About = () => {
                         now perfer playing the non contact version as it results
                         in less black eyes and limpy walks.
                     </Typography> */}
-                    <Typography>
+                    <Typography className="text-xl">
                         When I have some spare time, I try pick up new and
                         emerging technologies, ontop of honing my skills though
                         work. Below are some of the technologies I'm currently
                         working with:
                     </Typography>
-                    <ul className="marker:text-primaryHighlight list-disc list- grid  grid-cols-2">
+                    <ul className="marker:text-primaryHighlight text-xl list-disc list- grid  grid-cols-2 px-5">
                         <li>
                             <Typography>JavaScript</Typography>
                         </li>
@@ -89,14 +89,14 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="h-64 w-96 relative">
+                <div className="ml-10 max-h-[300px] min-w-[300px] relative">
                     <Image
                         src={'sexyMan.jpg'}
                         loader={() => 'sexyMan.jpg'}
                         alt="Picture of the author"
                         layout="fill" // required
                         objectFit="cover" // change to suit your needs
-                        className="rounded-full" // just an example
+                        className="rounded-md  bg-primaryHighlight/100" // just an example
                     />
                 </div>
             </div>

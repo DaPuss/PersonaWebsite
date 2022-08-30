@@ -13,7 +13,7 @@ export default function Index({ preview, workExperience, personalProjects }) {
             </Head>
             <Intro />
             <About />
-            <Experience />
+            <Experience experience={workExperience} />
         </Layout>
     )
 }

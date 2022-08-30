@@ -22,7 +22,7 @@ export default function SectionHeader({
             >
                 {title}
             </Typography>
-            <div className="bg-primaryGreen3 h-[2px] w-[100%] "></div>
+            <div className="bg-primaryGreen3 h-[3px] w-[100%] "></div>
         </div>
     )
 }

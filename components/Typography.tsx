@@ -27,16 +27,14 @@ const Typography = ({
     switch (variant) {
         case 'body':
             return (
-                <p
-                    className={`text-primaryText text-xl ${sharedClasses} ${classes}`}
-                >
+                <p className={`text-primaryText ${sharedClasses} ${classes}`}>
                     {children}
                 </p>
             )
         case 'body2':
             return (
                 <p
-                    className={`text-primaryHighlight text-xl ${sharedClasses} ${classes}`}
+                    className={`text-primaryHighlight ${sharedClasses} ${classes}`}
                 >
                     {children}
                 </p>

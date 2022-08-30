@@ -12,7 +12,7 @@ const Link = ({
     children: React.ReactNode
 }) => {
     return (
-        <div className="inline py-3 sm:max-w-xl sm:mx-auto">
+        <div className="align-middle inline">
             <a href={href} className={className}>
                 <span
                     className={`link ${styles.linkUnderline} hover:${styles.linkUnderlineHover} ${styles.linkUnderlineBlack} `}
