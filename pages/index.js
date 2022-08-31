@@ -1,5 +1,6 @@
 import Intro from '../components/sections/intro'
 import About from '../components/sections/About'
+import Projects from '../components/sections/Projects'
 import Experience from '../components/sections/Experience'
 import Layout from '../components/layout'
 import { getAllPostsForHome, getAllWorkExpereience } from '../lib/api'
@@ -14,6 +15,7 @@ export default function Index({ preview, workExperience, personalProjects }) {
             <Intro />
             <About />
             <Experience experience={workExperience} />
+            <Projects projects={personalProjects} />
         </Layout>
     )
 }

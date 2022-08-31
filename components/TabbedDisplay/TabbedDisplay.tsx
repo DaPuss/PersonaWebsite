@@ -39,7 +39,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
     }
 
     return (
-        <div className="flex flex-col md:flex-row max-w-[700px]">
+        <div className="flex flex-col md:flex-row ">
             <div
                 id="tabSelector"
                 className="relative flex flex-row md:flex-col px-4"

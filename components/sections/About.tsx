@@ -4,14 +4,14 @@ import Section from '../Section'
 import SectionHeader from '../SectionHeader'
 import Typography from '../Typography'
 const About = () => {
-    const mobileBreakpoint = useMediaQuery('lg')
+    const mobileBreakpoint = useMediaQuery('xl')
     return (
         <Section id="about">
             <SectionHeader count={1} title={'About Me'} />
             <div
                 className={`flex ${
                     mobileBreakpoint ? 'flex-row' : 'flex-col'
-                } gap-6`}
+                } gap-6 xl: items-center`}
             >
                 <div className="flex flex-col gap-6">
                     <Typography className="text-xl">
@@ -89,7 +89,7 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="ml-10 max-h-[300px] min-w-[300px] relative">
+                <div className="ml-10 h-[300px] w-[300px] relative">
                     <Image
                         src={'sexyMan.jpg'}
                         loader={() => 'sexyMan.jpg'}

@@ -12,7 +12,7 @@ const TabButtonAnimation = ({ currentIndex }: Props) => {
     const translation = isWide ? 'translateY' : 'translateX'
     return (
         <div
-            className={`absolute bg-primaryGreen3`}
+            className={`absolute bg-primaryHighlight`}
             style={{
                 transform: `${translation}(${position}px)`,
                 transition:

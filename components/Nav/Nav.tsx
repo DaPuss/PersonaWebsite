@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Button from '../Button'
+import Button from '../Button/Button'
 import NavDrawer from './NavDrawer'
 import HeaderLink from './HeaderLink'
 import Logo from '../Logo'

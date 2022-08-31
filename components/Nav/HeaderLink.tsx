@@ -11,16 +11,13 @@ const HeaderLink = ({
 }) => {
     return (
         <Link href={`#${href}`}>
-            <div className="cursor-pointer flex ">
-                <Typography
-                    variant="heading2"
-                    className="text-2xl font-bold mx-2"
-                >
+            <div className="cursor-pointer flex text-2xl font-bold hover:text-3xl transition-all duration-100">
+                <Typography variant="heading2" className="mx-2">
                     {index}.{' '}
                 </Typography>
                 <Typography
                     variant="heading"
-                    className="text-2xl font-bold myfont mx-5 hover:text-primaryHighlight"
+                    className="myfont mx-5 hover:text-primaryHighlight"
                 >
                     {sectionName}
                 </Typography>

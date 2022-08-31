@@ -56,7 +56,7 @@ const Typography = ({
         case 'heading3':
             return (
                 <Tag
-                    className={`text-primaryGreen3 ${sharedClasses} ${classes}`}
+                    className={`text-primaryHeading ${sharedClasses} ${classes}`}
                 >
                     {children}
                 </Tag>
