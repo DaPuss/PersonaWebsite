@@ -18,13 +18,14 @@ const NavDrawer = ({ navItems }: props) => {
     }
     return (
         <>
-            <div
-                className={`${
-                    open
-                        ? 'bg-primaryBackground opacity-5'
-                        : 'opacity-100 -z-10'
-                } absolute top-0 right-0 h-screen w-screen`}
-            ></div>
+            {open && (
+                <div
+                    className={
+                        'bg-primaryBackground opacity-50 absolute top-0 right-0 h-screen w-screen'
+                    }
+                ></div>
+            )}
+
             <button
                 onClick={() => toggle()}
                 className="text-primaryHighlight text-4xl ml-5 myfont z-0"

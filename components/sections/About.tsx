@@ -61,7 +61,7 @@ const About = () => {
                         work. Below are some of the technologies I&apos;m
                         currently working with:
                     </Typography>
-                    <ul className="marker:text-primaryHighlight text-xl list-disc list- grid  grid-cols-2 px-5">
+                    <ul className="marker:text-primaryHighlight text-xl list-disc list- grid  grid-cols-2 px-5 before:content-['">
                         <li>
                             <Typography>JavaScript</Typography>
                         </li>
@@ -71,7 +71,6 @@ const About = () => {
                         <li>
                             <Typography>NEXT.js</Typography>
                         </li>
-
                         <li>
                             <Typography>ASP.NET</Typography>
                         </li>
@@ -89,15 +88,17 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="ml-10 h-[300px] w-[300px] relative">
-                    <Image
-                        src={'sexyMan.jpg'}
-                        loader={() => 'sexyMan.jpg'}
-                        alt="Picture of the author"
-                        layout="fill" // required
-                        objectFit="cover" // change to suit your needs
-                        className="rounded-md  bg-primaryHighlight/100" // just an example
-                    />
+                <div>
+                    <div className="ml-0 mt-10 xl:mt-0 xl:ml-10 h-[300px] min-w-[300px] relative before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/40 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
+                        <Image
+                            src={'sexyMan.jpg'}
+                            loader={() => 'sexyMan.jpg'}
+                            alt="Picture of the sexy man"
+                            layout="fill" // required
+                            objectFit="cover" // change to suit your needs
+                            className="rounded-md  " // just an example
+                        />
+                    </div>
                 </div>
             </div>
         </Section>

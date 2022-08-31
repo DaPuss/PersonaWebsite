@@ -22,7 +22,7 @@ const Nav = () => {
             key={'header-link-03'}
             index={'03'}
             sectionName="Work"
-            href="work"
+            href="projects"
         />,
         <HeaderLink
             key={'header-link-04'}
@@ -31,6 +31,7 @@ const Nav = () => {
             href="contact"
         />,
         <Button
+            className="mx-5"
             key={'header-link-05'}
             onClick={() => {
                 console.log('todo')
@@ -44,7 +45,7 @@ const Nav = () => {
 
     return (
         <nav
-            className={`fixed min-w-full transition duration-150 ease-out ${
+            className={`fixed min-w-full transition duration-150 ease-out z-10 ${
                 scrollDir == 'up' ? '' : 'hidden '
             }`}
         >

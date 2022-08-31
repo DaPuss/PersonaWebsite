@@ -6,9 +6,9 @@ interface Props {
     children: React.ReactNode
 }
 
-const Button = ({ onClick, children }: Props) => {
+const Button = ({ onClick, className, children }: Props) => {
     return (
-        <button className={styles.button} onClick={onClick}>
+        <button className={`${styles.button} ${className}`} onClick={onClick}>
             <span className="w-full text-primaryHighlight bold transition-all duration-300 ease z-10">
                 {children}
             </span>
