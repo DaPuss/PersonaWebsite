@@ -1,4 +1,5 @@
 import Typography from './Typography'
+import 'animate.css'
 export default function SectionHeader({
     count,
     title,
@@ -7,7 +8,7 @@ export default function SectionHeader({
     title: string
 }) {
     return (
-        <div className="flex gap-6 py-10 items-center">
+        <div className="flex gap-6 py-10 items-center animate__animated animate__fadeIn">
             <Typography
                 variant="heading2"
                 as={'h2'}
