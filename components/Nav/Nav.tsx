@@ -1,18 +1,43 @@
-import { useEffect, useState } from 'react'
 import Button from '../Button/Button'
 import NavDrawer from './NavDrawer'
 import HeaderLink from './HeaderLink'
-import Logo from '../Logo'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import Typography from '../Typography'
 import useScrollDirection from '../../hooks/useScrollDirection'
 const Nav = () => {
     const navItems: React.ReactNode[] = [
-        <HeaderLink index={'01'} sectionName="About" href="about" />,
-        <HeaderLink index={'02'} sectionName="Experience" href="experience" />,
-        <HeaderLink index={'03'} sectionName="Work" href="work" />,
-        <HeaderLink index={'04'} sectionName="Contact" href="contact" />,
-        <Button onClick={() => {}}>Resume</Button>,
+        <HeaderLink
+            key={'header-link-01'}
+            index={'01'}
+            sectionName="About"
+            href="about"
+        />,
+        <HeaderLink
+            key={'header-link-02'}
+            index={'02'}
+            sectionName="Experience"
+            href="experience"
+        />,
+        <HeaderLink
+            key={'header-link-03'}
+            index={'03'}
+            sectionName="Work"
+            href="work"
+        />,
+        <HeaderLink
+            key={'header-link-04'}
+            index={'04'}
+            sectionName="Contact"
+            href="contact"
+        />,
+        <Button
+            key={'header-link-05'}
+            onClick={() => {
+                console.log('todo')
+            }}
+        >
+            Resume
+        </Button>,
     ]
     const mobileBreakpoint = useMediaQuery('lg')
     const { scrollDir, scrollPosition } = useScrollDirection()

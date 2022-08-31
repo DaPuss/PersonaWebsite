@@ -1,4 +1,3 @@
-import Section from '../Section'
 import Typography from '../Typography'
 const Intro = () => {
     return (

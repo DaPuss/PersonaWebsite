@@ -1,11 +1,9 @@
-import Image from 'next/image'
-import useMediaQuery from '../../hooks/useMediaQuery'
 import Section from '../Section'
-import Typography from '../Typography'
 import SectionHeader from '../SectionHeader'
 import TabbedDisplay from '../TabbedDisplay/TabbedDisplay'
-const Experience = ({ experience }: { experience: any }) => {
-    const mobileBreakpoint = useMediaQuery('md')
+import { Experience } from '../TabbedDisplay/TabbedDisplay'
+
+const Experience = ({ experience }: { experience: Experience[] }) => {
     return (
         <Section id="experience">
             <SectionHeader count={2} title={"Where I've Worked"} />

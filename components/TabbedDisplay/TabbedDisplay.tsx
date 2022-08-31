@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import TabContent from './TabContent'
 import TabButton from './TabButton'
 import TabButtonAnimation from './TabButtonAnimation'
+
 export interface Experience {
     title: string
     company: string
@@ -17,7 +18,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
     const [currentIndex, setcurrentIndex] = useState(0)
 
     const company = experience.map((job) => job.company)
-    let refs: switchRef = {}
+    const refs: switchRef = {}
     company.forEach((company) => {
         refs[company] = React.createRef()
     })
@@ -45,7 +46,11 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
                 className="relative flex flex-row md:flex-col px-4"
             >
                 {company.map((company) => (
-                    <TabButton company={company} onClick={setCurrentTab} />
+                    <TabButton
+                        key={`workexp-btn-${company}`}
+                        company={company}
+                        onClick={setCurrentTab}
+                    />
                 ))}
                 <TabButtonAnimation currentIndex={currentIndex} />
             </div>
@@ -53,6 +58,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
                 {experience.map((job, index) => {
                     return (
                         <TabContent
+                            key={`workexp-content-${job.company}`}
                             experience={job}
                             index={index}
                             ref={refs[job.company]}

@@ -1,5 +1,3 @@
-import { EXAMPLE_PATH } from '../../lib/constants'
-
 const Footer = () => {
     return (
         <footer className="bg-primaryBackground">

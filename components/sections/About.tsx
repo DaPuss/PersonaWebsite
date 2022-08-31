@@ -17,16 +17,16 @@ const About = () => {
                     <Typography className="text-xl">
                         Kia Ora! My name is Dylan and I love to solve problems
                         involving technology. My interest in tech started as a
-                        kid, I'd spend countless hours configuring the home
+                        kid, I&apos;d spend countless hours configuring the home
                         network all for a better Call of Duty connection. My
                         parents were never fans of my gaming, but ultimately
-                        it's how I fell in love with tech and got to where I am
-                        today.
+                        it&apos;s how I fell in love with tech and got to where
+                        I am today.
                     </Typography>
                     <Typography className="text-xl">
-                        Fast-forward to today, and I've worked with many amazing
-                        people, through many different roles. I started my
-                        career as a Data Entry Assistant at a
+                        Fast-forward to today, and I&apos;ve worked with many
+                        amazing people, through many different roles. I started
+                        my career as a Data Entry Assistant at a
                         <Typography
                             variant="link"
                             href="https://www.trademe.co.nz/"
@@ -58,8 +58,8 @@ const About = () => {
                     <Typography className="text-xl">
                         When I have some spare time, I try pick up new and
                         emerging technologies, ontop of honing my skills though
-                        work. Below are some of the technologies I'm currently
-                        working with:
+                        work. Below are some of the technologies I&apos;m
+                        currently working with:
                     </Typography>
                     <ul className="marker:text-primaryHighlight text-xl list-disc list- grid  grid-cols-2 px-5">
                         <li>

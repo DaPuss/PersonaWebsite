@@ -3,7 +3,7 @@ import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Experience from '../components/sections/Experience'
 import Layout from '../components/layout'
-import { getAllPostsForHome, getAllWorkExpereience } from '../lib/api'
+import { getAllWorkExpereience } from '../lib/api'
 import Head from 'next/head'
 
 export default function Index({ preview, workExperience, personalProjects }) {
