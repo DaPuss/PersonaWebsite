@@ -1,8 +1,8 @@
-import Intro from '../components/sections/intro'
+import Intro from '../components/sections/Intro'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Experience from '../components/sections/Experience'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { getAllWorkExpereience } from '../lib/api'
 import Head from 'next/head'
 
