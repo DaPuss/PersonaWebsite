@@ -1,10 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 export default class MyDocument extends Document {
     render() {
         return (
-            <Html lang="en" style={{ margin: 0, height: '100%' }}>
+            <Html lang="en">
                 <Head>
                     <link
                         rel="preconnect"
@@ -20,7 +19,7 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body style={{ margin: 0, height: '100%' }}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
