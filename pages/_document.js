@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default class MyDocument extends Document {
     render() {
         return (
-            <Html lang="en">
+            <Html lang="en" style={{ margin: 0, height: '100%' }}>
                 <Head>
                     <link
                         rel="preconnect"
@@ -20,10 +20,9 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body>
+                <body style={{ margin: 0, height: '100%' }}>
                     <Main />
                     <NextScript />
-                    <Script src="../node_modules/flowbite/dist/flowbite.js"></Script>
                 </body>
             </Html>
         )

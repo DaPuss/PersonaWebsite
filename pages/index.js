@@ -2,6 +2,7 @@ import Intro from '../components/sections/Intro'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Experience from '../components/sections/Experience'
+import Contact from '../components/sections/Contact'
 import Layout from '../components/Layout'
 import { getAllWorkExpereience } from '../lib/api'
 import Head from 'next/head'
@@ -16,6 +17,7 @@ export default function Index({ preview, workExperience, personalProjects }) {
             <About />
             <Experience experience={workExperience} />
             <Projects projects={personalProjects} />
+            <Contact/>
         </Layout>
     )
 }

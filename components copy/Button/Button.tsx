@@ -13,7 +13,7 @@ const Button = ({ onClick, className, children, ...props }: Props) => {
             className={`${styles.button} ${className}`}
             onClick={onClick}
         >
-            <span className="w-full bold transition-all duration-300 ease z-10">
+            <span className="w-full text-primaryHighlight bold transition-all duration-300 ease z-10">
                 {children}
             </span>
         </button>

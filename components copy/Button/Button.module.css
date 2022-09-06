@@ -1,7 +1,7 @@
 .button {
-    font-weight: 700;
+    font: bold;
     transition: all 0.5s ease;
-    color: #ffd369;
+    color: #fff;
     border: 3px solid white;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -16,14 +16,4 @@
 
 .button:hover {
     background-color: #eeeeee;
-    color: #ffd369;
-    text-shadow: -1px -1px 0 #222831, 1px -1px 0 #222831, -1px 1px 0 #222831,
-        1px 1px 0 #222831;
-    border: 3px solid #ffd369;
-}
-
-.button:focus,
-.button:focus-within {
-    outline: none;
-    border: 3px solid #ffd369;
 }
