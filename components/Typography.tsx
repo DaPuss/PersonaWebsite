@@ -13,12 +13,14 @@ const Typography = ({
     href,
     className,
     children,
+    style,
     as,
 }: {
     as?: keyof JSX.IntrinsicElements
     variant?: variants
     href?: string
     className?: string
+    style?: any
     children: React.ReactNode
 }) => {
     const sharedClasses = 'font-share-tech tracking-tighter leading-tight'
@@ -27,13 +29,17 @@ const Typography = ({
     switch (variant) {
         case 'body':
             return (
-                <p className={`text-primaryText ${sharedClasses} ${classes}`}>
+                <p
+                    style={style}
+                    className={`text-primaryText ${sharedClasses} ${classes}`}
+                >
                     {children}
                 </p>
             )
         case 'body2':
             return (
                 <p
+                    style={style}
                     className={`text-primaryHighlight ${sharedClasses} ${classes}`}
                 >
                     {children}
@@ -41,13 +47,17 @@ const Typography = ({
             )
         case 'heading':
             return (
-                <Tag className={`text-primaryText ${sharedClasses} ${classes}`}>
+                <Tag
+                    style={style}
+                    className={`text-primaryText ${sharedClasses} ${classes}`}
+                >
                     {children}
                 </Tag>
             )
         case 'heading2':
             return (
                 <Tag
+                    style={style}
                     className={`text-primaryHighlight ${sharedClasses} ${classes}`}
                 >
                     {children}
@@ -56,6 +66,7 @@ const Typography = ({
         case 'heading3':
             return (
                 <Tag
+                    style={style}
                     className={`text-primaryHeading ${sharedClasses} ${classes}`}
                 >
                     {children}
@@ -63,7 +74,10 @@ const Typography = ({
             )
         case 'heading4':
             return (
-                <h1 className={`text-primaryCream ${sharedClasses} ${classes}`}>
+                <h1
+                    style={style}
+                    className={`text-primaryCream ${sharedClasses} ${classes}`}
+                >
                     {children}
                 </h1>
             )

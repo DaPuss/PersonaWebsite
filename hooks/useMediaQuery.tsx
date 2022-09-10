@@ -22,7 +22,6 @@ const useMediaQuery = (twBreakpoint: string) => {
     useEffect(() => {
         const query = `(min-width: ${twBreakpoints[twBreakpoint]})`
 
-        console.log('query is:', query)
         const media = window.matchMedia(query)
 
         if (media.matches !== matches) {
@@ -34,7 +33,6 @@ const useMediaQuery = (twBreakpoint: string) => {
         }
         window.addEventListener('resize', listener)
         return () => {
-            console.log('RETURNING')
             window.removeEventListener('resize', listener)
         }
     }, [matches, twBreakpoint])

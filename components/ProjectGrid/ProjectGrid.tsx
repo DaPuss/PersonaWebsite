@@ -1,12 +1,25 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
-const ProjectGrid = () => {
+export interface Project {
+    title: string
+    description: string
+    githubLink: string
+    websiteLink: string
+    technology: string[]
+}
+
+const ProjectGrid = ({ projects }: { projects: Project[] }) => {
+    console.log(projects)
     return (
         <>
-            <ProjectCard alignment="left" />
-            <ProjectCard alignment="right" />
-            <ProjectCard alignment="left" />
+            {projects.map((project, index) => (
+                <ProjectCard
+                    key={project.title}
+                    project={project}
+                    alignment={index % 2 == 0 ? 'left' : 'right'}
+                />
+            ))}
         </>
     )
 }

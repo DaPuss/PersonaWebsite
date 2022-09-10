@@ -1,19 +1,22 @@
 import styles from './Button.module.css'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    onClick?: () => void
     className?: string
+    innerBtnClassName?: string
     children: React.ReactNode
 }
 
-const Button = ({ onClick, className, children, ...props }: Props) => {
+const Button = ({
+    className,
+    innerBtnClassName,
+    children,
+    ...props
+}: Props) => {
     return (
-        <button
-            {...props}
-            className={`${styles.button} ${className}`}
-            onClick={onClick}
-        >
-            <span className="w-full bold transition-all duration-300 ease z-10">
+        <button {...props} className={`${styles.button} ${className}`}>
+            <span
+                className={`w-full bold transition-all duration-300 ease z-10  ${innerBtnClassName}`}
+            >
                 {children}
             </span>
         </button>

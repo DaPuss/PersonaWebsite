@@ -3,12 +3,14 @@ import Typography from '../Typography'
 import { RiGithubLine, RiExternalLinkFill } from 'react-icons/ri'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Project } from './ProjectGrid'
 
 import useMediaQuery from '../../hooks/useMediaQuery'
 interface Props {
+    project: Project
     alignment: 'left' | 'right'
 }
-const ProjectCard = ({ alignment }: Props) => {
+const ProjectCard = ({ project, alignment }: Props) => {
     const leftClass =
         'col-start-1 col-end-7 row-start-1 row-end-1 gap-8 relative'
     const rightClass =
@@ -42,19 +44,12 @@ const ProjectCard = ({ alignment }: Props) => {
                         </Typography>
 
                         <Typography className="text-4xl text-primaryHeading my-5">
-                            NFT Minting Website
+                            {project.title}
                         </Typography>
                     </div>
                     <div className="bg-transparent lg:bg-[#374252] p-5 rounded-md">
                         <Typography className="text-xl">
-                            When I have some spare time, I try pick up new and
-                            emerging technologies, ontop of honing my skills
-                            though work. Below are some of the technologies
-                            I&apos;m currently working with: When I have some
-                            spare time, I try pick up new and emerging
-                            technologies, ontop of honing my skills though work.
-                            Below are some of the technologies I&apos;m
-                            currently working with:
+                            {project.description}
                         </Typography>
                     </div>
                     <div
@@ -66,21 +61,14 @@ const ProjectCard = ({ alignment }: Props) => {
                                 : 'justify-center'
                         }`}
                     >
-                        <Typography className="text-xl mr-4 text-primaryText/50">
-                            Next.js
-                        </Typography>
-                        <Typography className="text-xl mr-4 text-primaryText/50">
-                            Web3.js
-                        </Typography>
-                        <Typography className="text-xl mr-4 text-primaryText/50">
-                            Ethereum
-                        </Typography>
-                        <Typography className="text-xl mr-4 text-primaryText/50">
-                            React
-                        </Typography>
-                        <Typography className="text-xl mr-4 text-primaryText/50">
-                            Vercel
-                        </Typography>
+                        {project.technology.map((tech) => (
+                            <Typography
+                                key={`${project.title}-${tech}`}
+                                className="text-xl mr-4 text-primaryText/50"
+                            >
+                                {tech}
+                            </Typography>
+                        ))}
                     </div>
                     <div
                         className={`my-5 flex ${
@@ -92,7 +80,7 @@ const ProjectCard = ({ alignment }: Props) => {
                         }`}
                     >
                         <div className="cursor-pointer">
-                            <Link href={''}>
+                            <Link href={project.websiteLink}>
                                 <RiExternalLinkFill
                                     className="mr-5 text-primaryText hover:text-primaryHighlight"
                                     size={30}
@@ -100,7 +88,7 @@ const ProjectCard = ({ alignment }: Props) => {
                             </Link>
                         </div>
                         <div className="cursor-pointer">
-                            <Link href={''}>
+                            <Link href={project.githubLink}>
                                 <RiGithubLine
                                     className="text-primaryText  hover:text-primaryHighlight"
                                     size={30}

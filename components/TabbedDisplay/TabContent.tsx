@@ -68,7 +68,7 @@ const TabContent = (
                             className="py-2 before:content-none"
                             key={`${company}-keyact-${index}`}
                         >
-                            <Typography className="text-xl ">
+                            <Typography className="text-md sm:text-lg  ">
                                 {activity}
                             </Typography>
                         </li>
