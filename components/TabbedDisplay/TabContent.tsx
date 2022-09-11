@@ -45,6 +45,7 @@ const TabContent = (
         } ${startDateFormatted.getFullYear()}`
     }
     return (
+        //if not the first card hide it
         <div className={`${index == 0 ? '' : 'hidden'}`} ref={ref}>
             <div className="flex py-1">
                 <Typography className=" text-xl sm:text-2xl">
@@ -68,7 +69,7 @@ const TabContent = (
                             className="py-2 before:content-none"
                             key={`${company}-keyact-${index}`}
                         >
-                            <Typography className="text-md sm:text-lg  ">
+                            <Typography className="text-md sm:text-lg whitespace-normal">
                                 {activity}
                             </Typography>
                         </li>

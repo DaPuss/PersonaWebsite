@@ -52,7 +52,7 @@ const About = () => {
                         work. Below are some of the technologies I&apos;m
                         currently working with:
                     </Typography>
-                    <ul className="marker:text-primaryHighlight text-xl list-disc grid grid-cols-2 px-5 before:content-none align-middle">
+                    <ul className="marker:text-primaryHighlight text-xl list-disc grid grid-cols-1 md:grid-cols-2 px-5 before:content-none align-middle">
                         <li className="before:content-none">
                             <Typography>JavaScript</Typography>
                         </li>

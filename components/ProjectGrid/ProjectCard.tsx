@@ -30,7 +30,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                 } z-20 bg-[#374252]/80 rounded-md p-5 lg:p-0 lg:bg-transparent`}
             >
                 <div
-                    className={`${
+                    className={`whitespace-normal ${
                         isDesktop
                             ? alignment === 'left'
                                 ? 'text-left'
@@ -99,7 +99,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                 </div>
             </div>
             <div className={`${isDesktop ? projectImage : mobileClassImage}`}>
-                <div className="ml-0 mt-10 xl:mt-0 xl:ml-10 h-[400px] min-w-[450px] relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
+                <div className="hidden ml-0 mt-10 xl:mt-0 xl:ml-10 h-[400px] min-w-[450px] md:block relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
                     <Image
                         src={'temp.png'}
                         loader={() => 'temp.png'}

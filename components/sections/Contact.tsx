@@ -140,7 +140,7 @@ const Contact = () => {
                 className="flex flex-col gap-6"
                 onSubmit={contactSubmit.bind(this)}
             >
-                <div className="flex flex-row gap-6 before:content-none">
+                <div className="flex flex-col gap-3 md:flex-row md:gap-6  before:content-none">
                     <Input
                         type="text"
                         placeholder="John-117 "

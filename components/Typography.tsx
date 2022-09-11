@@ -23,7 +23,8 @@ const Typography = ({
     style?: any
     children: React.ReactNode
 }) => {
-    const sharedClasses = 'font-share-tech tracking-tighter leading-tight'
+    const sharedClasses =
+        'font-share-tech tracking-tighter leading-tight whitespace-normals'
     const classes = className ? className : ''
     const Tag = as ? as : 'h1'
     switch (variant) {

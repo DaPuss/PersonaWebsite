@@ -39,20 +39,35 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
         }
     }
 
+    const getAnimationDimensions = () => {
+        if (typeof window !== 'undefined') {
+            const button = document.getElementById(`tabbedButton-${company[0]}`)
+            const positionInfo = button?.getBoundingClientRect()
+            const height = positionInfo?.height ?? 0
+            const width = positionInfo?.width ?? 0
+            return { height, width }
+        }
+        return { height: 0, width: 0 }
+    }
+
     return (
-        <div className="flex flex-col md:flex-row ">
+        <div className="flex flex-col md:flex-row overflow-hidden">
             <div
                 id="tabSelector"
                 className="relative flex flex-row md:flex-col px-4"
             >
                 {company.map((company) => (
                     <TabButton
+                        id={`tabbedButton-${company}`}
                         key={`workexp-btn-${company}`}
                         company={company}
                         onClick={setCurrentTab}
                     />
                 ))}
-                <TabButtonAnimation currentIndex={currentIndex} />
+                <TabButtonAnimation
+                    getDimensions={getAnimationDimensions}
+                    currentIndex={currentIndex}
+                />
             </div>
             <div id="content" className="m-2">
                 {experience.map((job, index) => {

@@ -10,7 +10,6 @@ export interface Project {
 }
 
 const ProjectGrid = ({ projects }: { projects: Project[] }) => {
-    console.log(projects)
     return (
         <>
             {projects.map((project, index) => (
