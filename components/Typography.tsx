@@ -92,7 +92,6 @@ const Typography = ({
                 </Link>
             )
         default:
-            console.log('default')
             return <p className={`${sharedClasses} ${classes}`}>{children}</p>
     }
 }

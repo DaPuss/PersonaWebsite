@@ -7,6 +7,10 @@ export interface Project {
     githubLink: string
     websiteLink: string
     technology: string[]
+    projectImage: {
+        url: string
+        title: string
+    }
 }
 
 const ProjectGrid = ({ projects }: { projects: Project[] }) => {

@@ -1,5 +1,8 @@
 module.exports = {
+    experimental: {
+        esmExternals: false,
+    },
     images: {
-        loader: 'custom',
+        domains: ['images.ctfassets.net'],
     },
 }

@@ -13,7 +13,6 @@ const NavDrawer = ({ navItems }: props) => {
     const [open, setOpen] = React.useState(false)
 
     const toggle = () => {
-        console.log(!open)
         setOpen(() => !open)
     }
     return (

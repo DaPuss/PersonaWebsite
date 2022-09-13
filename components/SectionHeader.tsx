@@ -1,5 +1,4 @@
 import Typography from './Typography'
-import 'animate.css'
 export default function SectionHeader({
     count,
     title,
