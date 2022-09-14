@@ -4,6 +4,7 @@ import Button from '../Button/Button'
 import Input from '../Input/Input'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 
 interface EmailForm {
     name: string
@@ -119,7 +120,6 @@ const Contact = () => {
             )
             .then(
                 (result: any) => {
-                    console.log(result.text)
                     setFormState({
                         name: '',
                         email: '',
@@ -136,7 +136,19 @@ const Contact = () => {
     return (
         <Section id="contact">
             <SectionHeader count={4} title={'Get In Touch'} />
-            <form
+            <motion.form
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{
+                    type: 'Inertia',
+                    bounce: 0.2,
+                    duration: 0.5,
+                }}
+                variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0.5 },
+                }}
                 className="flex flex-col gap-6"
                 onSubmit={contactSubmit.bind(this)}
             >
@@ -179,7 +191,7 @@ const Contact = () => {
                 <Button type="submit" onClick={contactSubmit.bind(this)}>
                     Submit
                 </Button>
-            </form>
+            </motion.form>
         </Section>
     )
 }

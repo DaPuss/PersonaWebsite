@@ -25,7 +25,6 @@ export default function Index({ preview, workExperience, personalProjects }) {
 export async function getStaticProps({ preview = false }) {
     const workExperience = (await getAllWorkExpereience()) ?? []
     const personalProjects = (await getAllProjects()) ?? []
-    console.log(personalProjects)
     return {
         props: { preview, workExperience, personalProjects },
     }

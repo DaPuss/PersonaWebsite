@@ -27,10 +27,10 @@ const ProjectCard = ({ project, alignment }: Props) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
+            transition={{ type: 'spring', bounce: 0.4, duration: 0.8 }}
             variants={{
                 visible: { opacity: 1, scale: 1 },
-                hidden: { opacity: 0, scale: 0 },
+                hidden: { opacity: 0, scale: 0.5 },
             }}
         >
             <div

@@ -3,12 +3,27 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 import Section from '../Section'
 import SectionHeader from '../SectionHeader'
 import Typography from '../Typography'
+import { motion } from 'framer-motion'
+
 const About = () => {
     const mobileBreakpoint = useMediaQuery('xl')
+
     return (
         <Section id="about">
             <SectionHeader count={1} title={'About Me'} />
-            <div
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{
+                    type: 'Inertia',
+                    bounce: 0.2,
+                    duration: 0.5,
+                }}
+                variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0.5 },
+                }}
                 className={`flex ${
                     mobileBreakpoint ? 'flex-row' : 'flex-col'
                 } gap-6 xl: items-center`}
@@ -91,7 +106,7 @@ const About = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </Section>
     )
 }
