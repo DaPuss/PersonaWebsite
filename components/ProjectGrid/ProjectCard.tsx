@@ -93,18 +93,22 @@ const ProjectCard = ({ project, alignment }: Props) => {
                         >
                             <div className="cursor-pointer">
                                 <Link href={project.websiteLink}>
-                                    <RiExternalLinkFill
-                                        className="mr-5 text-primaryText hover:text-primaryHighlight"
-                                        size={30}
-                                    />
+                                    <div>
+                                        <RiExternalLinkFill
+                                            className="mr-5 text-primaryText hover:text-primaryHighlight"
+                                            size={30}
+                                        />
+                                    </div>
                                 </Link>
                             </div>
                             <div className="cursor-pointer">
                                 <Link href={project.githubLink}>
-                                    <RiGithubLine
-                                        className="text-primaryText  hover:text-primaryHighlight"
-                                        size={30}
-                                    />
+                                    <div>
+                                        <RiGithubLine
+                                            className="text-primaryText  hover:text-primaryHighlight"
+                                            size={30}
+                                        />
+                                    </div>
                                 </Link>
                             </div>
                         </div>

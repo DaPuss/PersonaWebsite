@@ -11,7 +11,7 @@ const Link = ({
     children: React.ReactNode
 }) => {
     return (
-        <div className="align-middle inline">
+        <span className="align-middle inline">
             <a href={href} className={className}>
                 <span
                     className={`link ${styles.linkUnderline} hover:${styles.linkUnderlineHover} ${styles.linkUnderlineBlack} `}
@@ -19,7 +19,7 @@ const Link = ({
                     {children}
                 </span>
             </a>
-        </div>
+        </span>
     )
 }
 

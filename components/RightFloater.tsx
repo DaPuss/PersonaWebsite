@@ -1,10 +1,15 @@
 import React from 'react'
 import Typography from './Typography'
 import Link from './Link/Link'
+import Animation from './Animation'
 import { EMAIL } from '../lib/constants'
 const RightFloater = () => {
     return (
-        <div className="fixed bottom-0 right-[40px] w-[40px] z-100 hidden md:flex flex-col items-center after:block after:w-[2px] after:bg-primaryText after:h-[150px] after:mx-auto after:mt-10">
+        <Animation
+            delay={0}
+            duration={0.2}
+            className="fixed bottom-0 right-[40px] w-[40px] z-100 hidden md:flex flex-col items-center after:block after:w-[2px] after:bg-primaryText after:h-[150px] after:mx-auto after:mt-10"
+        >
             <Link href={`mailto:${EMAIL}`}>
                 <Typography
                     variant="heading"
@@ -14,7 +19,7 @@ const RightFloater = () => {
                     Dylan.Frewen@gmail.com
                 </Typography>
             </Link>
-        </div>
+        </Animation>
     )
 }
 

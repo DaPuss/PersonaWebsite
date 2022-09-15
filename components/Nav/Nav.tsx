@@ -4,48 +4,60 @@ import HeaderLink from './HeaderLink'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import Typography from '../Typography'
 import useScrollDirection from '../../hooks/useScrollDirection'
+import Animation from '../Animation'
 const Nav = () => {
+    const duration = 0.2
     const navItems: React.ReactNode[] = [
-        <HeaderLink
-            key={'header-link-01'}
-            index={'01'}
-            sectionName="About"
-            href="about"
-        />,
-        <HeaderLink
+        <Animation key={'header-link-01'} delay={0} duration={duration}>
+            <HeaderLink index={'01'} sectionName="About" href="about" />
+        </Animation>,
+        <Animation
             key={'header-link-02'}
-            index={'02'}
-            sectionName="Experience"
-            href="experience"
-        />,
-        <HeaderLink
-            key={'header-link-03'}
-            index={'03'}
-            sectionName="Work"
-            href="projects"
-        />,
-        <HeaderLink
-            key={'header-link-04'}
-            index={'04'}
-            sectionName="Contact"
-            href="contact"
-        />,
-        <Button
-            className="mx-5"
-            key={'header-link-05'}
-            onClick={() => {
-                console.log('todo')
-            }}
+            delay={duration * 2}
+            duration={duration}
         >
-            Resume
-        </Button>,
+            <HeaderLink
+                index={'02'}
+                sectionName="Experience"
+                href="experience"
+            />
+        </Animation>,
+        <Animation
+            key={'header-link-03'}
+            delay={duration * 3}
+            duration={duration}
+        >
+            <HeaderLink index={'03'} sectionName="Work" href="projects" />
+        </Animation>,
+        <Animation
+            key={'header-link-04'}
+            delay={duration * 4}
+            duration={duration}
+        >
+            <HeaderLink index={'04'} sectionName="Contact" href="contact" />
+        </Animation>,
+
+        <Animation
+            key={'header-link-05'}
+            delay={duration * 5}
+            duration={duration}
+        >
+            <Button
+                className="mx-5"
+                onClick={() => {
+                    console.log('todo')
+                }}
+            >
+                Resume
+            </Button>
+        </Animation>,
     ]
     const mobileBreakpoint = useMediaQuery('lg')
     const { scrollDir, scrollPosition } = useScrollDirection()
 
     return (
         <nav
-            className={`fixed min-w-full transition duration-150 ease-out z-10 ${
+            className={`fixed min-w-full transition duration-150 ease-out z-50 ${
                 scrollDir == 'up' ? '' : 'hidden '
             }`}
         >

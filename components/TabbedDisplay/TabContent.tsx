@@ -22,10 +22,8 @@ const months = [
     'December',
 ]
 
-const TabContent = (
-    { experience, index }: Props,
-    ref: React.ForwardedRef<HTMLDivElement>
-) => {
+const TabContent = React.forwardRef(( { experience, index }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
+
     const { title, company, startDate, endDate, keyActivities } = experience
     const startDateFormatted = new Date(startDate)
 
@@ -79,5 +77,7 @@ const TabContent = (
         </div>
     )
 }
+)
 
-export default forwardRef(TabContent)
+TabContent.displayName = "TabContent";
+export default TabContent
