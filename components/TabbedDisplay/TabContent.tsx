@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import Typography from '../Typography'
 import { Experience } from './TabbedDisplay'
 
@@ -22,62 +22,62 @@ const months = [
     'December',
 ]
 
-const TabContent = React.forwardRef(( { experience, index }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
+const TabContent = React.forwardRef(
+    ({ experience, index }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
+        const { title, company, startDate, endDate, keyActivities } = experience
+        const startDateFormatted = new Date(startDate)
 
-    const { title, company, startDate, endDate, keyActivities } = experience
-    const startDateFormatted = new Date(startDate)
-
-    const getEndDate = () => {
-        if (endDate) {
-            const endDateFormatted = new Date(endDate)
-            return `${
-                months[endDateFormatted.getMonth()]
-            } ${endDateFormatted.getFullYear()}`
+        const getEndDate = () => {
+            if (endDate) {
+                const endDateFormatted = new Date(endDate)
+                return `${
+                    months[endDateFormatted.getMonth()]
+                } ${endDateFormatted.getFullYear()}`
+            }
+            return 'Present'
         }
-        return 'Present'
-    }
 
-    const getStartDate = () => {
-        return `${
-            months[startDateFormatted.getMonth()]
-        } ${startDateFormatted.getFullYear()}`
-    }
-    return (
-        //if not the first card hide it
-        <div className={`${index == 0 ? '' : 'hidden'}`} ref={ref}>
-            <div className="flex py-1">
-                <Typography className=" text-xl sm:text-2xl">
-                    {title}
-                </Typography>
-                <Typography
-                    variant="link"
-                    className=" mx-1 text-xl sm:text-2xl"
-                >
-                    @ {company}
-                </Typography>
-            </div>
+        const getStartDate = () => {
+            return `${
+                months[startDateFormatted.getMonth()]
+            } ${startDateFormatted.getFullYear()}`
+        }
+        return (
+            //if not the first card hide it
+            <div className={`${index == 0 ? '' : 'hidden'}`} ref={ref}>
+                <div className="flex py-1">
+                    <Typography className=" text-xl sm:text-2xl">
+                        {title}
+                    </Typography>
+                    <Typography
+                        variant="link"
+                        className=" mx-1 text-xl sm:text-2xl"
+                    >
+                        @ {company}
+                    </Typography>
+                </div>
 
-            <Typography className="py-1 text-lg sm:text-xl uppercase ">
-                {getStartDate()} - {getEndDate()}
-            </Typography>
-            <div>
-                <ul className="marker:text-primaryHighlight list-disc spacing-2">
-                    {keyActivities.map((activity, index) => (
-                        <li
-                            className="py-2 before:content-none"
-                            key={`${company}-keyact-${index}`}
-                        >
-                            <Typography className="text-md sm:text-lg whitespace-normal">
-                                {activity}
-                            </Typography>
-                        </li>
-                    ))}
-                </ul>
+                <Typography className="py-1 text-lg sm:text-xl uppercase ">
+                    {getStartDate()} - {getEndDate()}
+                </Typography>
+                <div>
+                    <ul className="marker:text-primaryHighlight list-disc spacing-2">
+                        {keyActivities.map((activity, index) => (
+                            <li
+                                className="py-2 before:content-none"
+                                key={`${company}-keyact-${index}`}
+                            >
+                                <Typography className="text-md sm:text-lg whitespace-normal">
+                                    {activity}
+                                </Typography>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 )
 
-TabContent.displayName = "TabContent";
+TabContent.displayName = 'TabContent'
 export default TabContent

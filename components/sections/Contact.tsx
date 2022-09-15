@@ -119,7 +119,7 @@ const Contact = () => {
                 process.env.NEXT_PUBLIC_EMAIL_JS_KEY
             )
             .then(
-                (result: any) => {
+                () => {
                     setFormState({
                         name: '',
                         email: '',
