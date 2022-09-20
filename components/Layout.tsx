@@ -10,11 +10,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 5000)
+        }, 3500)
     }, [])
 
     return (
-        <div className="bg-gradient-to-r from-primaryBackground via-[#242b36] to-primaryBackground min-h-[100vh]">
+        <div
+            id="top"
+            className="bg-gradient-to-r from-primaryBackground via-[#242b36] to-primaryBackground min-h-[100vh]"
+        >
             {loading ? (
                 <Loader />
             ) : (

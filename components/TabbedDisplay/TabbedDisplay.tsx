@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import TabContent from './TabContent'
 import TabButton from './TabButton'
-import dynamic from 'next/dynamic'
 import Animation from '../Animation'
+import TabButtonAnimation from './TabButtonAnimation'
 export interface Experience {
     title: string
     company: string
@@ -23,12 +23,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
         refs[company] = React.createRef()
     })
 
-    const ButtonAnimation = dynamic(() => import('./TabButtonAnimation'), {
-        ssr: false,
-    })
-
     const setCurrentTab = (company: string) => {
-        //TODO: this is gross and needs to be fixed
         let index = 0
         for (const key in refs) {
             const className = refs[key].current?.className
@@ -49,6 +44,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
             const positionInfo = button?.getBoundingClientRect()
             const height = positionInfo?.height ?? 0
             const width = positionInfo?.width ?? 0
+            console.log({ height, width })
             return { height, width }
         }
         return { height: 0, width: 0 }
@@ -60,28 +56,27 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
                 id="tabSelector"
                 className="relative flex flex-row md:flex-col px-4"
             >
-                <Animation delay={0} duration={0.2}>
-                    {company.map((company) => (
+                {company.map((company) => (
+                    <Animation
+                        key={`workexp-btn-${company}`}
+                        delay={0}
+                        duration={0.2}
+                    >
                         <TabButton
                             id={`tabbedButton-${company}`}
-                            key={`workexp-btn-${company}`}
                             company={company}
                             onClick={setCurrentTab}
                         />
-                    ))}
-                </Animation>
+                    </Animation>
+                ))}
 
-                {/* <DynamicAnimation
-                    getDimensions={getAnimationDimensions}
-                    currentIndex={currentIndex}
-                /> */}
-                <ButtonAnimation
+                <TabButtonAnimation
                     getDimensions={getAnimationDimensions}
                     currentIndex={currentIndex}
                 />
             </div>
             <Animation delay={0.2} duration={0.2}>
-                <div id="content" className="m-2">
+                <div id="content" className="m-2 ">
                     {experience.map((job, index) => {
                         return (
                             <TabContent

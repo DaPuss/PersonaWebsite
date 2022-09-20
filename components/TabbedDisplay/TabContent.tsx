@@ -44,7 +44,10 @@ const TabContent = React.forwardRef(
         }
         return (
             //if not the first card hide it
-            <div className={`${index == 0 ? '' : 'hidden'}`} ref={ref}>
+            <div
+                className={`${index == 0 ? '' : 'hidden'} max-w-[600px]`}
+                ref={ref}
+            >
                 <div className="flex py-1">
                     <Typography className=" text-xl sm:text-2xl">
                         {title}

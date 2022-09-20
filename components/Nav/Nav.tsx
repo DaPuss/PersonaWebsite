@@ -27,7 +27,7 @@ const Nav = () => {
             delay={duration * 3}
             duration={duration}
         >
-            <HeaderLink index={'03'} sectionName="Work" href="projects" />
+            <HeaderLink index={'03'} sectionName="Projects" href="projects" />
         </Animation>,
         <Animation
             key={'header-link-04'}
@@ -68,7 +68,11 @@ const Nav = () => {
             >
                 <div className="relative flex items-center h-[80px] justify-between px-10 py-10 mr-auto">
                     <div className="text-primaryHighlight text-4xl ml-5 share-tech text-left">
-                        <Typography variant="heading2" className="text-5xl">
+                        <Typography
+                            variant="link"
+                            href="#top"
+                            className="text-5xl"
+                        >
                             DF
                         </Typography>
                     </div>

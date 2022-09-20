@@ -39,7 +39,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                 <div
                     className={`${
                         isDesktop ? projectContent : mobileClassContent
-                    } z-20 bg-[#374252]/80 rounded-md p-5 lg:p-0 lg:bg-transparent`}
+                    } z-20  rounded-md p-5 lg:p-0 `}
                 >
                     <div
                         className={`whitespace-normal ${
@@ -117,7 +117,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                 <div
                     className={`${isDesktop ? projectImage : mobileClassImage}`}
                 >
-                    <div className="hidden ml-0 mt-10 xl:mt-0 xl:ml-10 h-[400px] min-w-[450px] md:block relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
+                    <div className="before:bg-black/80 ml-0 mt-10 xl:mt-0 xl:ml-10 h-[400px] min-w-[450px] md:block relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:lg:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
                         <Image
                             src={project.projectImage.url}
                             alt="Picture of the sexy man"

@@ -14,7 +14,7 @@ const RightFloater = () => {
                 <Typography
                     variant="heading"
                     style={{ writingMode: 'vertical-rl' }}
-                    className="text-center tracking-[0.2em]  cursor-pointer"
+                    className="text-center tracking-[0.2em] cursor-pointer text-xl"
                 >
                     Dylan.Frewen@gmail.com
                 </Typography>
