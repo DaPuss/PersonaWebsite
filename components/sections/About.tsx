@@ -8,6 +8,10 @@ const About = () => {
     const mobileBreakpoint = useMediaQuery('xl')
     const baseDuration = 0.2
     const baseDelay = 0.2
+    const afterImage =
+        'after:border-2 after:border-primaryHighlight after: after:absolute after:top-[20px] after:left-[20px] after:h-[100%] after:w-[100%] after:-z-50'
+    const beforeImage =
+        'before:rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/40 before:z-30 before:hover:before:bg-primaryHighlight/0'
 
     return (
         <Section id="about">
@@ -24,49 +28,63 @@ const About = () => {
                         <Typography className="text-xl">
                             Kia Ora! My name is Dylan and I love to solve
                             problems involving technology. My interest in tech
-                            started as a kid, I&apos;d spend countless hours
-                            configuring the home network all for a better Call
-                            of Duty connection. My parents were never fans of my
-                            gaming, but ultimately it&apos;s how I fell in love
-                            with tech and got to where I am today.
+                            started as a kid. To the distaste of my parents
+                            I&apos;d spend countless hours breaking the home
+                            network trying for a better Call of Duty connection.
                         </Typography>
                     </Animation>
                     <Animation delay={baseDelay * 3} duration={baseDuration}>
                         <Typography className="text-xl">
-                            Fast-forward to today, and I&apos;ve worked with
-                            many amazing people, through many different roles. I
-                            started my career as a Data Entry Assistant at a
+                            Fast-forward to today, and I&apos;m creeping towards
+                            my 4th year working in Tech. In my short time
+                            working I&apos;ve been lucky enough to engage with
+                            many amazing people across various projects helping
+                            to deliver solutions with real value to the New
+                            Zealand people.
+                        </Typography>
+                    </Animation>
+                    <Animation delay={baseDelay * 3} duration={baseDuration}>
+                        <Typography className="text-xl">
+                            I started my career as a Data Entry Assistant at a
                             <Typography
                                 variant="link"
                                 href="https://www.trademe.co.nz/"
                             >
-                                {' product company '}
+                                {' TradeMe '}
                             </Typography>
-                            for a summer job. I then went on to become a Test
-                            Automation engineer doing government contracts for a
+                            as a summer job. After graduation I went on to
+                            become a Test Automation engineer at
                             <Typography
                                 variant="link"
                                 href="https://www.planittesting.com/nz/home"
                             >
-                                {' testing consultancy. '}
+                                {' Planit. '}
                             </Typography>
-                            Before finally landing as a Software Developer at a
+                            where I spent most of my time on a transformation
+                            project for the NZ goverment. Finally I&apos;ve
+                            landing as a Software Developer at a
                             <Typography
                                 variant="link"
                                 href="http://capgemini.com/"
                             >
-                                {' services company.'}
+                                {' Capgemini(formally Intergen)'} where I still
+                                remain.
                             </Typography>
                         </Typography>
                     </Animation>
                     <Animation delay={baseDelay * 4} duration={baseDuration}>
                         <Typography className="text-xl">
-                            When I have some spare time, I try pick up new and
-                            emerging technologies, ontop of honing my skills
-                            though work. Below are some of the technologies
-                            I&apos;m currently working with:
+                            When I&apos;m not off playing rugby, baking
+                            crossiants, or dropping killsteaks in COD, I try
+                            pick up new and emerging technologies to see what
+                            they are about, or even spend some time sharpening
+                            up stuff I already know.
+                        </Typography>
+                        <Typography className="text-xl mt-6">
+                            Below are some things I&apos;ve been using recently:
                         </Typography>
                     </Animation>
+
                     <Animation delay={baseDelay * 5} duration={baseDuration}>
                         <ul className="marker:text-primaryHighlight text-xl list-disc grid grid-cols-1 md:grid-cols-2 px-5 before:content-none align-middle">
                             <li className="before:content-none">
@@ -98,7 +116,9 @@ const About = () => {
                 </div>
                 <div>
                     <Animation delay={baseDelay * 6} duration={baseDuration}>
-                        <div className="ml-0 mt-10 xl:mt-0 xl:ml-10 h-[300px] min-w-[300px] before:rounded-md relative before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-primaryHighlight/40 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
+                        <div
+                            className={`ml-0 mt-10 xl:mt-0 xl:ml-10 h-[300px] min-w-[300px]  z-20 relative  transition-opacity ${beforeImage} ${afterImage}`}
+                        >
                             <Image
                                 src={'sexyMan.jpg'}
                                 loader={() => 'sexyMan.jpg'}

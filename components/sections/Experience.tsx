@@ -14,7 +14,7 @@ const Experience = ({ experience }: { experience: Experience[] }) => {
     return (
         <Section id="experience">
             <SectionHeader count={2} title={"Where I've Worked"} />
-            <div className="flex justify-center">
+            <div className="flex justify-center min-h-[400px]">
                 <TabbedDisplay experience={experience} />
             </div>
         </Section>
