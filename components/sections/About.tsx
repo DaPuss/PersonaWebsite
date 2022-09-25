@@ -25,7 +25,7 @@ const About = () => {
             >
                 <div className="flex flex-col gap-6">
                     <Animation delay={baseDelay * 2} duration={baseDuration}>
-                        <Typography className="text-xl">
+                        <Typography className="text-lg md:text-xl">
                             Kia Ora! My name is Dylan and I love to solve
                             problems involving technology. My interest in tech
                             started as a kid. To the distaste of my parents
@@ -34,7 +34,7 @@ const About = () => {
                         </Typography>
                     </Animation>
                     <Animation delay={baseDelay * 3} duration={baseDuration}>
-                        <Typography className="text-xl">
+                        <Typography className="text-lg md:text-xl">
                             Fast-forward to today, and I&apos;m creeping towards
                             my 4th year working in Tech. In my short time
                             working I&apos;ve been lucky enough to engage with
@@ -44,7 +44,7 @@ const About = () => {
                         </Typography>
                     </Animation>
                     <Animation delay={baseDelay * 3} duration={baseDuration}>
-                        <Typography className="text-xl">
+                        <Typography className="text-lg md:text-xl">
                             I started my career as a Data Entry Assistant at a
                             <Typography
                                 variant="link"
@@ -67,26 +67,27 @@ const About = () => {
                                 variant="link"
                                 href="http://capgemini.com/"
                             >
-                                {' Capgemini(formally Intergen)'} where I still
-                                remain.
+                                {' Capgemini (formally Intergen) '}
                             </Typography>
+                            where I still remain.
                         </Typography>
                     </Animation>
                     <Animation delay={baseDelay * 4} duration={baseDuration}>
-                        <Typography className="text-xl">
+                        <Typography className="text-lg md:text-xl">
                             When I&apos;m not off playing rugby, baking
                             crossiants, or dropping killsteaks in COD, I try
                             pick up new and emerging technologies to see what
                             they are about, or even spend some time sharpening
                             up stuff I already know.
                         </Typography>
-                        <Typography className="text-xl mt-6">
-                            Below are some things I&apos;ve been using recently:
+                        <Typography className="text-lg md:text-xl mt-6">
+                            Below are some things I&apos;ve been playing with
+                            recently:
                         </Typography>
                     </Animation>
 
                     <Animation delay={baseDelay * 5} duration={baseDuration}>
-                        <ul className="marker:text-primaryHighlight text-xl list-disc grid grid-cols-1 md:grid-cols-2 px-5 before:content-none align-middle">
+                        <ul className="marker:text-primaryHighlight text-lg md:text-xl list-disc grid grid-cols-2 px-5 before:content-none align-middle">
                             <li className="before:content-none">
                                 <Typography>JavaScript</Typography>
                             </li>
@@ -106,10 +107,10 @@ const About = () => {
                                 <Typography>C# </Typography>
                             </li>
                             <li className="before:content-none">
-                                <Typography>Ethereum/Solidity</Typography>
+                                <Typography>Web3.js</Typography>
                             </li>
                             <li className="before:content-none">
-                                <Typography>Web3.js</Typography>
+                                <Typography>Ethereum/Solidity</Typography>
                             </li>
                         </ul>
                     </Animation>

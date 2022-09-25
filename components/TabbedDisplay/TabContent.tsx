@@ -45,11 +45,13 @@ const TabContent = React.forwardRef(
         return (
             //if not the first card hide it
             <div
-                className={`${index == 0 ? '' : 'hidden'} max-w-[600px]`}
+                className={`${
+                    index == 0 ? 'flex flex-col gap-4' : 'hidden'
+                } max-w-[600px]`}
                 ref={ref}
             >
-                <div className="flex py-1">
-                    <Typography className=" text-xl sm:text-2xl">
+                <div className="flex">
+                    <Typography className="text-primaryHeading text-xl sm:text-2xl">
                         {title}
                     </Typography>
                     <Typography
@@ -60,17 +62,17 @@ const TabContent = React.forwardRef(
                     </Typography>
                 </div>
 
-                <Typography className="py-1 text-lg sm:text-xl uppercase ">
+                <Typography className="text-primaryHeading text-lg md:text-xl uppercase ">
                     {getStartDate()} - {getEndDate()}
                 </Typography>
-                <div>
-                    <ul className="marker:text-primaryHighlight list-disc spacing-2">
+                <div className="px-4 md:px-0">
+                    <ul className="marker:text-primaryHighlight text-lg list-disc spacing-2">
                         {keyActivities.map((activity, index) => (
                             <li
-                                className="py-2 before:content-none"
+                                className="my-2 before:content-none"
                                 key={`${company}-keyact-${index}`}
                             >
-                                <Typography className="text-md sm:text-lg whitespace-normal">
+                                <Typography className="text-lg md:text-xl whitespace-normal">
                                     {activity}
                                 </Typography>
                             </li>

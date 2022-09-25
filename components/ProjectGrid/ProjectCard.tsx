@@ -42,7 +42,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                     } z-20  rounded-md p-5 lg:p-0 `}
                 >
                     <div
-                        className={`whitespace-normal ${
+                        className={`whitespace-normal flex flex-col h-[100%] justify-center ${
                             isDesktop
                                 ? alignment === 'left'
                                     ? 'text-left'
@@ -51,11 +51,7 @@ const ProjectCard = ({ project, alignment }: Props) => {
                         }`}
                     >
                         <div>
-                            <Typography className="text-xl text-primaryHighlight my-5">
-                                Featured Project
-                            </Typography>
-
-                            <Typography className="text-4xl text-primaryHeading my-5">
+                            <Typography className="text-4xl text-primaryHighlight my-5">
                                 {project.title}
                             </Typography>
                         </div>
@@ -115,9 +111,11 @@ const ProjectCard = ({ project, alignment }: Props) => {
                     </div>
                 </div>
                 <div
-                    className={`${isDesktop ? projectImage : mobileClassImage}`}
+                    className={`${
+                        isDesktop ? projectImage : mobileClassImage
+                    } overflow-hidden`}
                 >
-                    <div className="before:bg-black/80 ml-0 mt-10 xl:mt-0 xl:ml-10 h-[400px] min-w-[450px] md:block relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:lg:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
+                    <div className="before:bg-black/80 ml-0 mt-0 md:mt-10 xl:mt-0 xl:ml-10 h-[600px] md:h-[400px] min-w-[450px] md:block relative before:rounded-md rounded-md before:absolute before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:lg:bg-primaryHighlight/20 before:z-10 before:hover:before:bg-primaryHighlight/0 transition-opacity">
                         <Image
                             src={project.projectImage.url}
                             alt="Picture of the sexy man"
