@@ -5,6 +5,8 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 import Typography from '../Typography'
 import useScrollDirection from '../../hooks/useScrollDirection'
 import Animation from '../Animation'
+import styles from './NavDrawer.module.css'
+
 const Nav = () => {
     const duration = 0.2
     const navItems: React.ReactNode[] = [
@@ -66,7 +68,7 @@ const Nav = () => {
                     scrollPosition > 80 ? 'bg-primaryBackground/80' : ''
                 } min-w-full`}
             >
-                <div className="relative flex items-center h-[80px] justify-between px-10 py-10 mr-auto">
+                <div className="relative flex items-center selection:h-[80px] justify-between px-10 py-10 mr-auto">
                     <div className="text-primaryHighlight text-4xl ml-5 share-tech text-left">
                         <Typography
                             variant="link"
