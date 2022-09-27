@@ -26,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <Nav />
                     <LeftFloater />
                     <RightFloater />
-                    <main className="max-w-screen-2xl min-h-screen mx-auto px-10 sm:px-20 md:px-30 lg:px-40">
+                    <main className="max-w-screen-2xl min-h-screen mx-auto px-5 sm:px-5 md:px-10 lg:px-20">
                         {children}
                     </main>
                     <Footer />

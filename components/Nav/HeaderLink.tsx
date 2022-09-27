@@ -11,7 +11,7 @@ const HeaderLink = ({
 }) => {
     return (
         <Link href={`#${href}`}>
-            <div className="cursor-pointer flex text-2xl font-bold hover:text-3xl transition-all duration-100">
+            <div className="cursor-pointer flex text-xl font-bold hover:text-2xl transition-all duration-100">
                 <Typography variant="heading2" className="mx-2">
                     {index}.{' '}
                 </Typography>

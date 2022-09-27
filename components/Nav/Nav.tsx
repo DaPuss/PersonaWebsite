@@ -5,6 +5,7 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 import Typography from '../Typography'
 import useScrollDirection from '../../hooks/useScrollDirection'
 import Animation from '../Animation'
+import Image from 'next/image'
 
 const Nav = () => {
     const duration = 0.2
@@ -77,13 +78,16 @@ const Nav = () => {
             >
                 <div className="relative flex items-center selection:h-[80px] justify-between px-10 py-5 mr-auto">
                     <div className="text-primaryHighlight text-4xl ml-5 share-tech text-left">
-                        <Typography
-                            variant="link"
-                            href="#top"
-                            className="text-5xl"
-                        >
-                            DF
-                        </Typography>
+                        <Image
+                            src={'logo.png'}
+                            loader={() => 'logo.png'}
+                            alt="Picture of the sexy man"
+                            layout="fixed" // required
+                            width={'60px'}
+                            height={'60px'}
+                            objectFit="cover" // change to suit your needs
+                            className="hover:cursor-pointer  " // just an example
+                        />
                     </div>
                     {mobileBreakpoint ? (
                         <div className="ml-auto relative flex items-center justify-between">

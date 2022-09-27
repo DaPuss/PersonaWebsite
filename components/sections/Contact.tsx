@@ -11,6 +11,8 @@ interface EmailForm {
     subject: string
     email: string
     message: string
+    successMessage: string
+    errorMessage: string
 }
 const Contact = () => {
     //Email input form containing a field for email address, subject and message with a button to submit
@@ -20,12 +22,16 @@ const Contact = () => {
         email: '',
         subject: '',
         message: '',
+        successMessage: '',
+        errorMessage: '',
     })
     const [formState, setFormState] = useState<EmailForm>({
         name: '',
         email: '',
         subject: '',
         message: '',
+        successMessage: '',
+        errorMessage: '',
     })
 
     const handleValidation = (field: keyof typeof formState) => {
@@ -84,6 +90,8 @@ const Contact = () => {
             email: email.newError,
             subject: subject.newError,
             message: message.newError,
+            successMessage: '',
+            errorMessage: '',
         }
         const formIsValid =
             name.formIsValid &&
@@ -125,10 +133,15 @@ const Contact = () => {
                         email: '',
                         subject: '',
                         message: '',
+                        successMessage: 'Message Sent!',
+                        errorMessage: '',
                     })
                 },
                 (error: any) => {
-                    console.log(error.text)
+                    setFormState({
+                        ...formState,
+                        errorMessage: error,
+                    })
                 }
             )
     }
@@ -182,7 +195,7 @@ const Contact = () => {
                 </div>
                 <Input
                     textArea
-                    placeholder="Hi Dylan, we would like to offer you..."
+                    placeholder="Hi Dylan, we would like to offer you a $1,000,000 salary with unlimited vaction, also..."
                     label={'Message'}
                     handleChange={handleChange.bind(this, 'message')}
                     value={formState['message']}
@@ -191,6 +204,16 @@ const Contact = () => {
                 <Button type="submit" onClick={contactSubmit.bind(this)}>
                     Submit
                 </Button>
+                {formState.successMessage && (
+                    <p className="text-green-600 min-h-[20px] text-center">
+                        {formState.successMessage}
+                    </p>
+                )}
+                {formState.errorMessage && (
+                    <p className="text-red-600 min-h-[20px] text-center">
+                        {formState.errorMessage}
+                    </p>
+                )}
             </motion.form>
         </Section>
     )

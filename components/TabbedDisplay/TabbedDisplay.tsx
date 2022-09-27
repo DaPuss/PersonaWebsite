@@ -54,8 +54,9 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
         <div className="flex flex-col md:flex-row overflow-hidden">
             <div
                 id="tabSelector"
-                className="relative flex flex-row md:flex-col px-4"
+                className="relative flex flex-row md:flex-col px-4 overflow-auto"
             >
+                {/*TODO: when button clicked scroll overflow into view*/}
                 {company.map((company) => (
                     <Animation
                         key={`workexp-btn-${company}`}
