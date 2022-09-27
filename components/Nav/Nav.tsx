@@ -76,7 +76,10 @@ const Nav = () => {
                 } min-w-full`}
             >
                 <div className="relative flex items-center selection:h-[80px] justify-between px-10 py-5 mr-auto">
-                    <div className="text-primaryHighlight text-4xl ml-5 share-tech text-left">
+                    <a
+                        href="#top"
+                        className="text-primaryHighlight text-4xl ml-5 share-tech text-left"
+                    >
                         <Image
                             src={'logo.png'}
                             loader={() => 'logo.png'}
@@ -87,7 +90,7 @@ const Nav = () => {
                             objectFit="cover" // change to suit your needs
                             className="hover:cursor-pointer  " // just an example
                         />
-                    </div>
+                    </a>
                     {mobileBreakpoint ? (
                         <div className="ml-auto relative flex items-center justify-between">
                             {navItems}
