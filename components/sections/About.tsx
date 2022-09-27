@@ -6,8 +6,8 @@ import Typography from '../Typography'
 import Animation from '../Animation'
 const About = () => {
     const mobileBreakpoint = useMediaQuery('xl')
-    const baseDuration = 0.2
-    const baseDelay = 0.2
+    const baseDuration = 0.4
+    const baseDelay = 0.4
     const afterImage =
         'after:border-2 after:border-primaryHighlight after: after:absolute after:top-[20px] after:left-[20px] after:h-[100%] after:w-[100%] after:-z-50'
     const beforeImage =

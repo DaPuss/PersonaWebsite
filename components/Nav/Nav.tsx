@@ -5,7 +5,6 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 import Typography from '../Typography'
 import useScrollDirection from '../../hooks/useScrollDirection'
 import Animation from '../Animation'
-import styles from './NavDrawer.module.css'
 
 const Nav = () => {
     const duration = 0.2
@@ -47,7 +46,15 @@ const Nav = () => {
             <Button
                 className="mx-5"
                 onClick={() => {
-                    console.log('todo')
+                    fetch('dylanCv.pdf').then((response) => {
+                        response.blob().then((blob) => {
+                            const fileURL = window.URL.createObjectURL(blob)
+                            const alink = document.createElement('a')
+                            alink.href = fileURL
+                            alink.download = 'dylanCv.pdf'
+                            alink.click()
+                        })
+                    })
                 }}
             >
                 Resume
@@ -68,7 +75,7 @@ const Nav = () => {
                     scrollPosition > 80 ? 'bg-primaryBackground/80' : ''
                 } min-w-full`}
             >
-                <div className="relative flex items-center selection:h-[80px] justify-between px-10 py-10 mr-auto">
+                <div className="relative flex items-center selection:h-[80px] justify-between px-10 py-5 mr-auto">
                     <div className="text-primaryHighlight text-4xl ml-5 share-tech text-left">
                         <Typography
                             variant="link"

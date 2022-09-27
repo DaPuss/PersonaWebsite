@@ -47,7 +47,7 @@ const TabContent = React.forwardRef(
             <div
                 className={`${
                     index == 0 ? 'flex flex-col gap-4' : 'hidden'
-                } max-w-[600px]`}
+                } max-w-[600px] before:content-none`}
                 ref={ref}
             >
                 <div className="flex">

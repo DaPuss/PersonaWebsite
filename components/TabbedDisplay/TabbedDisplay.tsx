@@ -60,7 +60,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
                     <Animation
                         key={`workexp-btn-${company}`}
                         delay={0}
-                        duration={0.2}
+                        duration={0.4}
                     >
                         <TabButton
                             id={`tabbedButton-${company}`}
@@ -75,7 +75,7 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
                     currentIndex={currentIndex}
                 />
             </div>
-            <Animation delay={0.2} duration={0.2}>
+            <Animation delay={0.2} duration={0.4}>
                 <div id="content" className="m-2 ">
                     {experience.map((job, index) => {
                         return (
