@@ -4,13 +4,13 @@ import Footer from './Footer/Footer'
 import React, { useEffect, useState } from 'react'
 import LeftFloater from './LeftFloater'
 import RightFloater from './RightFloater'
-import Loader from './Loader'
+import Loader from './Loader/Loader'
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 3500)
+        }, 4000)
     }, [])
 
     return (
