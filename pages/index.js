@@ -8,6 +8,8 @@ import { getAllWorkExpereience, getAllProjects } from '../lib/api'
 import Head from 'next/head'
 
 export default function Index({ preview, workExperience, personalProjects }) {
+    console.log(workExperience)
+
     return (
         <Layout preview={preview}>
             <Head>

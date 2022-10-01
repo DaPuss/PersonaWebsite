@@ -8,8 +8,9 @@ export interface Experience {
     company: string
     startDate: string
     endDate?: string
-    description: string
-    keyActivities: string[]
+    listedActivities: {
+        keyActivities: string[]
+    }
 }
 
 type switchRef = Record<string, React.RefObject<HTMLDivElement>>
@@ -44,7 +45,6 @@ const TabbedDisplay = ({ experience }: { experience: Experience[] }) => {
             const positionInfo = button?.getBoundingClientRect()
             const height = positionInfo?.height ?? 0
             const width = positionInfo?.width ?? 0
-            console.log({ height, width })
             return { height, width }
         }
         return { height: 0, width: 0 }

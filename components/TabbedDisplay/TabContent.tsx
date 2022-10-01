@@ -24,7 +24,8 @@ const months = [
 
 const TabContent = React.forwardRef(
     ({ experience, index }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
-        const { title, company, startDate, endDate, keyActivities } = experience
+        const { title, company, startDate, endDate, listedActivities } =
+            experience
         const startDateFormatted = new Date(startDate)
 
         const getEndDate = () => {
@@ -67,16 +68,18 @@ const TabContent = React.forwardRef(
                 </Typography>
                 <div className="px-4 md:px-0">
                     <ul className="marker:text-primaryHighlight text-lg list-disc spacing-2">
-                        {keyActivities.map((activity, index) => (
-                            <li
-                                className="my-2 before:content-none"
-                                key={`${company}-keyact-${index}`}
-                            >
-                                <Typography className="text-lg md:text-xl whitespace-normal">
-                                    {activity}
-                                </Typography>
-                            </li>
-                        ))}
+                        {listedActivities.keyActivities.map(
+                            (activity, index) => (
+                                <li
+                                    className="my-2 before:content-none"
+                                    key={`${company}-keyact-${index}`}
+                                >
+                                    <Typography className="text-lg md:text-xl whitespace-normal">
+                                        {activity}
+                                    </Typography>
+                                </li>
+                            )
+                        )}
                     </ul>
                 </div>
             </div>
