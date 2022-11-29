@@ -7,7 +7,7 @@ import Animation from '../Animation'
 const About = () => {
     const mobileBreakpoint = useMediaQuery('xl')
     const baseDuration = 0.4
-    const baseDelay = 0.4
+    const baseDelay = 0.2
     const afterImage =
         'after:border-2 after:border-primaryHighlight after: after:absolute after:top-[20px] after:left-[20px] after:h-[100%] after:w-[100%] after:-z-50'
     const beforeImage =
@@ -17,7 +17,7 @@ const About = () => {
         <Section id="about">
             <SectionHeader count={1} title={'About Me'} />
             <Animation
-                delay={0}
+                delay={baseDelay * 1}
                 duration={baseDuration}
                 className={`flex ${
                     mobileBreakpoint ? 'flex-row' : 'flex-col'

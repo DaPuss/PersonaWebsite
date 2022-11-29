@@ -7,42 +7,27 @@ import Animation from '../Animation'
 import Image from 'next/image'
 
 const Nav = () => {
-    const duration = 0.2
+    const duration = 0.4
+    const delay = 0.2
     const navItems: React.ReactNode[] = [
-        <Animation key={'header-link-01'} delay={0} duration={duration}>
+        <Animation key={'header-link-01'} delay={delay * 1} duration={duration}>
             <HeaderLink index={'01'} sectionName="About" href="about" />
         </Animation>,
-        <Animation
-            key={'header-link-02'}
-            delay={duration * 2}
-            duration={duration}
-        >
+        <Animation key={'header-link-02'} delay={delay * 2} duration={duration}>
             <HeaderLink
                 index={'02'}
                 sectionName="Experience"
                 href="experience"
             />
         </Animation>,
-        <Animation
-            key={'header-link-03'}
-            delay={duration * 3}
-            duration={duration}
-        >
+        <Animation key={'header-link-03'} delay={delay * 3} duration={duration}>
             <HeaderLink index={'03'} sectionName="Projects" href="projects" />
         </Animation>,
-        <Animation
-            key={'header-link-04'}
-            delay={duration * 4}
-            duration={duration}
-        >
+        <Animation key={'header-link-04'} delay={delay * 4} duration={duration}>
             <HeaderLink index={'04'} sectionName="Contact" href="contact" />
         </Animation>,
 
-        <Animation
-            key={'header-link-05'}
-            delay={duration * 5}
-            duration={duration}
-        >
+        <Animation key={'header-link-05'} delay={delay * 5} duration={duration}>
             <Button
                 className="mx-5"
                 onClick={() => {
