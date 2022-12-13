@@ -20,8 +20,8 @@ const Loader = () => {
                     loader={() => 'bigBoyLogo.png'}
                     alt="Picture of the sexy man"
                     layout="fixed" // required
-                    width={'150px'}
-                    height={'150px'}
+                    width={150}
+                    height={150}
                     objectFit="cover" // change to suit your needs
                     className="hover:cursor-pointer " // just an example
                 />

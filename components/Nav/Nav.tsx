@@ -31,12 +31,12 @@ const Nav = () => {
             <Button
                 className="mx-5"
                 onClick={() => {
-                    fetch('dylanCv.pdf').then((response) => {
+                    fetch('DylanFrewenResume.pdf').then((response) => {
                         response.blob().then((blob) => {
                             const fileURL = window.URL.createObjectURL(blob)
                             const alink = document.createElement('a')
                             alink.href = fileURL
-                            alink.download = 'dylanCv.pdf'
+                            alink.download = 'DylanFrewenResume.pdf'
                             alink.click()
                         })
                     })
@@ -70,8 +70,8 @@ const Nav = () => {
                             loader={() => 'logo.png'}
                             alt="Picture of the sexy man"
                             layout="fixed" // required
-                            width={'60px'}
-                            height={'60px'}
+                            width={60}
+                            height={60}
                             objectFit="cover" // change to suit your needs
                             className="hover:cursor-pointer  " // just an example
                         />

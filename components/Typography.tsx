@@ -86,6 +86,7 @@ const Typography = ({
             return (
                 <Link
                     href={href || '#'}
+                    target="_blank"
                     className={`text-primaryHighlight ${sharedClasses} ${classes}`}
                 >
                     {children}

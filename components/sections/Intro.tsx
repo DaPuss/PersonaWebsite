@@ -64,7 +64,11 @@ const Intro = () => {
                     I’m a software engineer who has a passion solving real world
                     problems with technology. Currently, I’m a Junior full-stack
                     developer at
-                    <Typography variant="link" className="display: inline">
+                    <Typography
+                        variant="link"
+                        href="https://www.capgemini.com/"
+                        className="display: inline"
+                    >
                         {' Capgemini '}
                     </Typography>
                     focused on building products for the people of New Zealand.

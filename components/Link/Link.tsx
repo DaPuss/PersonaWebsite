@@ -5,14 +5,16 @@ const Link = ({
     href,
     className,
     children,
+    target,
 }: {
     href: string
     className?: string
     children: React.ReactNode
+    target?: string
 }) => {
     return (
         <span className="align-middle inline">
-            <a href={href} className={className}>
+            <a target={target} href={href} className={className}>
                 <span
                     className={`link ${styles.linkUnderline} hover:${styles.linkUnderlineHover} ${styles.linkUnderlineBlack} `}
                 >
